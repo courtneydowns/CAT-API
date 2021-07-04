@@ -339,43 +339,38 @@ async function displayResults(index) {
     image.src = breeds.image.url;
     about.innerText = breeds.description;
     temperament.innerText = `  Temperament:  ${breeds.temperament}`;
-    affection_level.innerText = `  Affection Level:  ${breeds.affection_level
-        }`;
+    affection_level.innerText = `  Affection Level:  ${breeds.affection_level}`;
     adaptability.innerText = `  Adaptability:  ${breeds.adaptability}`;
     child_friendly.innerText = `  Child Friendly:  ${breeds.child_friendly}`;
     dog_friendly.innerText = `  Dog Friendly:  ${breeds.dog_friendly}`;
     energy_level.innerText = `  Energy Level:  ${breeds.energy_level}`;
     grooming.innerText = `  Grooming:  ${breeds.grooming}`;
-    health_issues.innerText = `  Health Issues  ${breeds.health_issues}`;
+    health_issues.innerText = `  Health Issues:  ${breeds.health_issues}`;
     intelligence.innerText = `  Intelligence:  ${breeds.intelligence}`;
     shedding_level.innerText = `  Shedding Level:  ${breeds.shedding_level}`;
-    social_needs.innerText = `
-        Social Needs:  ${breeds.social_needs
-        }
-        `;
+    social_needs.innerText = `  Social Needs:  ${breeds.social_needs}`;
     stranger_friendly.innerText = `  Stranger Friendly:  ${breeds.stranger_friendly}`;
     vocalisation.innerText = `  Breeds:  ${breeds.vocalisation}`;
 
+    // image.classList.add("image");
+    card.classList.add("card-wrapper");
+    cardBody.classList.add("card-div");
     image.classList.add("image");
-    card.classList.add("card");
-    cardBody.classList.add("card-body");
-    cardBody.classList.add("card-title");
-    cardBody.classList.add("card-text");
-    cardBody.classList.add("card-text");
-    cardBody.classList.add("card-text");
-    cardBody.classList.add("card-text");
-    cardBody.classList.add("card-text");
-    cardBody.classList.add("card-text");
-    cardBody.classList.add("card-text");
-    cardBody.classList.add("card-text");
-    cardBody.classList.add("card-text");
-    cardBody.classList.add("card-text");
-    cardBody.classList.add("card-text");
-    cardBody.classList.add("card-text");
-    cardBody.classList.add("card-text");
-    cardBody.classList.add("card-text");
-    cardBody.classList.add("card-text");
-    card.classList.add("breed-results");
+    name.classList.add("name");
+    about.classList.add("p-class");
+    temperament.classList.add("p-class");
+    affection_level.classList.add("p-class");
+    adaptability.classList.add("p-class");
+    child_friendly.classList.add("p-class");
+    dog_friendly.classList.add("p-class");
+    energy_level.classList.add("p-class");
+    grooming.classList.add("p-class");
+    health_issues.classList.add("p-class");
+    intelligence.classList.add("p-class");
+    shedding_level.classList.add("p-class");
+    social_needs.classList.add("p-class");
+    stranger_friendly.classList.add("p-class");
+    // vocalisation.classList.add("card-text");
 
     card.appendChild(image);
     card.appendChild(cardBody);
