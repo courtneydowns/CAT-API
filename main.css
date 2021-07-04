@@ -1,8 +1,9 @@
+@import "breeds.css";
+@import "jumbotron.css";
+@import "navBar.css";
+@import "cardImage.css";
+
 body {
     background-color: black;
     color: white;
 }
-
-@import "breeds.css";
-@import "jumbotron.css";
-@import "navBar.css";
