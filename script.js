@@ -23,7 +23,7 @@ function getBreeds(e) {
     switch (option) {
 
         case "breed-1":
-            displayResults(0);
+            diplayResults(0);
             break;
 
         case "breed-2":
@@ -308,7 +308,17 @@ async function displayResults(index) {
     let breeds = fetchResults[index];
     let card = document.createElement("div");
     let cardBody = document.createElement("div");
-    let image = document.createElement("img");
+    // let image = document.createElement("img");
+    let abyssinianImage = document.createElement("img")
+    let aeganImage = document.createElement("img");
+    let americanBobtailImage = document.createElement("img");
+    let americanCurlImage = document.createElement("img");
+    let americanShorthairImage = document.createElement("img");
+    let americanWirehairImage = document.createElement("img");
+    let arabianMauImage = document.createElement("img");
+    let balineseImage = document.createElement("img");
+    let bambinoImage = document.createElement("img");
+    let bengalImage = document.createElement("img");
     let name = document.createElement("h1");
     let about = document.createElement("p");
     let temperament = document.createElement("p");
@@ -326,17 +336,33 @@ async function displayResults(index) {
     let stranger_friendly = document.createElement("p");
     let vocalisation = document.createElement("p");
 
-    if (breedResults.childNodes.length > 3) {
-        breedResults.removeChild(breedResults.childNodes[3]);
+    function detach(node) {
+        if (node.parentNode) {
+            node.parentNode.removeChild(node);
+        }
+    }
+
+    if (results.childNodes.length > 3) {
+        results.removeChild(results.childNodes[3]);
     };
 
     console.log(breeds);
     console.log(fetchResults);
     console.log(index);
-    console.log(breeds.intelligence);
+    // console.log(breeds.intelligence);
 
     name.innerHTML = breeds.name;
-    image.src = breeds.image.url;
+    // image.src = breeds.image.url;
+    abyssinianImage.src = breeds.image.url;
+    aeganImage.src = breeds.image.url;
+    americanBobtailImage.src = breeds.image.url;
+    americanCurlImage.src = breeds.image.url;
+    americanShorthairImage.src = breeds.image.url;
+    americanWirehairImage.src = breeds.image.url;
+    arabianMauImage.src = breeds.image.url;
+    balineseImage.src = breeds.image.url;
+    bambinoImage.src = breeds.image.url;
+    bengalImage.src = breeds.image.url;
     about.innerText = breeds.description;
     temperament.innerText = `  Temperament:  ${breeds.temperament}`;
     affection_level.innerText = `  Affection Level:  ${breeds.affection_level}`;
@@ -346,33 +372,54 @@ async function displayResults(index) {
     energy_level.innerText = `  Energy Level:  ${breeds.energy_level}`;
     grooming.innerText = `  Grooming:  ${breeds.grooming}`;
     health_issues.innerText = `  Health Issues:  ${breeds.health_issues}`;
-    intelligence.innerText = `  Intelligence:  ${breeds.intelligence}`;
-    shedding_level.innerText = `  Shedding Level:  ${breeds.shedding_level}`;
+    intelligence.innerText = `  Intelligence: ${breeds.intelligence}`;
+    shedding_level.innerText = `  Shedding Level: ${breeds.shedding_level}`;
     social_needs.innerText = `  Social Needs:  ${breeds.social_needs}`;
     stranger_friendly.innerText = `  Stranger Friendly:  ${breeds.stranger_friendly}`;
     vocalisation.innerText = `  Breeds:  ${breeds.vocalisation}`;
 
+    card.classList.add("cardWrapper");
+    cardBody.classList.add("cardDiv");
     // image.classList.add("image");
-    card.classList.add("card-wrapper");
-    cardBody.classList.add("card-div");
-    image.classList.add("image");
-    name.classList.add("name");
-    about.classList.add("p-class");
-    temperament.classList.add("p-class");
-    affection_level.classList.add("p-class");
-    adaptability.classList.add("p-class");
-    child_friendly.classList.add("p-class");
-    dog_friendly.classList.add("p-class");
-    energy_level.classList.add("p-class");
-    grooming.classList.add("p-class");
-    health_issues.classList.add("p-class");
-    intelligence.classList.add("p-class");
-    shedding_level.classList.add("p-class");
-    social_needs.classList.add("p-class");
-    stranger_friendly.classList.add("p-class");
-    // vocalisation.classList.add("card-text");
+    abyssinianImage.classList.add("abysinnianImage");
+    aeganImage.classList.add("aeganImage");
+    americanBobtailImage.classList.add("americanBobtailImage");
+    americanCurlImage.classList.add("americanCurlImage");
+    americanShorthairImage.classList.add("americanShorthairImage");
+    americanWirehairImage.classList.add("americanWirehairImage");
+    arabianMauImage.classList.add("arabianMauImage")
+    balineseImage.classList.add("balineseImage");
+    bambinoImage.classList.add("bambinoImage");
+    bengalImage.classList.add("bengalImage");
+    name.classList.add("h1Class");
+    about.classList.add("pClass");
+    cardBody.classList.add("pClass");
+    cardBody.classList.add("pClass");
+    cardBody.classList.add("pClass");
+    cardBody.classList.add("pClass");
+    cardBody.classList.add("pClass");
+    cardBody.classList.add("pClass");
+    cardBody.classList.add("pClass");
+    cardBody.classList.add("pClass");
+    cardBody.classList.add("pClass");
+    cardBody.classList.add("pClass");
+    cardBody.classList.add("pClass");
+    cardBody.classList.add("pClass");
+    cardBody.classList.add("pClass");
+    cardBody.classList.add("pClass");
+    card.classList.add("breed-results");
 
-    card.appendChild(image);
+    // card.appendChild(image);
+    card.appendChild(abyssinianImage);
+    card.appendChild(aeganImage);
+    card.appendChild(americanBobtailImage);
+    card.appendChild(americanCurlImage);
+    card.appendChild(americanShorthairImage);
+    card.appendChild(americanWirehairImage);
+    card.appendChild(arabianMauImage);
+    card.appendChild(balineseImage);
+    card.appendChild(bambinoImage);
+    card.appendChild(bengalImage);
     card.appendChild(cardBody);
     cardBody.appendChild(name);
     cardBody.appendChild(about);
@@ -390,5 +437,5 @@ async function displayResults(index) {
     cardBody.appendChild(social_needs);
     cardBody.appendChild(stranger_friendly);
     cardBody.appendChild(vocalisation);
-    breedResults.appendChild(card);
+    results.appendChild(card);
 }

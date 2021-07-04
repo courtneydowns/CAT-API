@@ -1,8 +1,75 @@
-.image {
-    width: 450px;
-    height: 300px;
-    /* display: flex;
+.aeganImage {
+    height: 800px;
+    width: 1200px;
+    display: flex;
     position: relative;
-    align-items: center; */
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
 }
 
+.abyssinianImage {
+    height: 1445px;
+    width: 1204px;
+    /* display: flex; */
+    /* position: relative; */
+    /* position: absolute; */
+    /* text-align: center; */
+    /* align-content: center; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* background-repeat: no-repeat;    */
+}
+
+.americanBobtailImage {
+    height: 951px;
+    width: 1600px;
+    /* display: flex; */
+    /* position: relative;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;     */
+}
+
+.americanCurlImage {
+    height: 1200px;
+    weidth: 1600px;
+}
+
+.americanShorthairImage {
+    height: 1200px;
+    width: 1600px;
+}
+
+.AmericanWirehairImage {
+    height: 936px;
+    width: 1200px;
+}
+
+.arabianMauImage {
+    height: 1554px;
+    width: 2048px;
+}
+
+.australianMistImage {
+    height: 1165px;
+    width: 1231px;
+}
+
+.balineseImage {
+    height: 1000px;
+    width: 1600px;
+}
+
+.bambinoImage {
+    height: 1030px;
+    width: 1296px;
+}
+
+.bengalImage {
+    height: 739px;
+    width: 1100px;
+}
