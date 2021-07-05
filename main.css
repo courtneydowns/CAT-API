@@ -7,9 +7,13 @@
 @import "pClass.css";
 @import "h1Class.css";
 @import "cardDiv.css";
+@import "about.css";
+@import "temperament.css";
+@import "card-color.css";
+@import "footer.css";
 
 body {
     background-color: black;
     color: white;
-    height: 180vh;
+    height: 200vh;
 }

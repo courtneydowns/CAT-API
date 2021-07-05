@@ -1,4 +1,7 @@
-.jumbotron .container {
-    bottom: 2em;
-    position: relative;
+.jumbotron {
+background: url('./assets/CatABaseOfBreeds.png') no-repeat center center;
+height: 160vh;
+/* width: 100%; */
+background-size: cover;
+/* padding-bottom: 100px;; */
 }

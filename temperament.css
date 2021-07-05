@@ -1,0 +1,13 @@
+.temperament {
+    /* line-height: 3em; */
+    text-align: center;
+    /* border: 2px solid yellow; */
+    font-size: 24px;
+    margin: 25px 0;
+    font-family: 'Spectral', sans-serif;
+    font-weight: 700;
+    font-weight: bold;
+    word-spacing: .2em;
+    padding-bottom: .25em;
+    color: black;
+}

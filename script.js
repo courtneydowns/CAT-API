@@ -290,11 +290,6 @@ function getBreeds(e) {
             displayResults(66)
             break;
 
-        case "breed-68":
-            displayResults(67)
-            break;
-
-
         default:
             console.log(`error${option}`);
             break;
@@ -307,7 +302,7 @@ async function displayResults(index) {
     // let image = document.createElement("img");
     // let abyssinianImage = document.createElement("img")
     // let aeganImage = document.createElement("img");
-    let americanBobtailImage = document.createElement("img");
+    // let americanBobtailImage = document.createElement("img");
     // let americanCurlImage = document.createElement("img");
     // let americanShorthairImage = document.createElement("img");
     // let americanWirehairImage = document.createElement("img");
@@ -374,7 +369,7 @@ async function displayResults(index) {
     let breeds = fetchResults[index];
     let card = document.createElement("div");
     let cardBody = document.createElement("div");
-    // let image = document.createElement("img");
+    let image = document.createElement("img");
     let name = document.createElement("h1");
     let about = document.createElement("p");
     let temperament = document.createElement("p");
@@ -406,25 +401,25 @@ async function displayResults(index) {
     console.log(index);
     // console.log(breeds.intelligence);
 
-    // image.src = breeds.image.url;
+    image.src = breeds.image.url;
     name.innerText = breeds.name;
     about.innerText = breeds.description;
-    temperament.innerText = `  Temperament:  ${breeds.temperament}`;
-    affection_level.innerText = `  Affection Level:  ${breeds.affection_level}`;
-    adaptability.innerText = `  Adaptability:  ${breeds.adaptability}`;
-    child_friendly.innerText = `  Child Friendly:  ${breeds.child_friendly}`;
-    dog_friendly.innerText = `  Dog Friendly:  ${breeds.dog_friendly}`;
-    energy_level.innerText = `  Energy Level:  ${breeds.energy_level}`;
-    grooming.innerText = `  Grooming:  ${breeds.grooming}`;
-    health_issues.innerText = `  Health Issues:  ${breeds.health_issues}`;
-    intelligence.innerText = `  Intelligence: ${breeds.intelligence}`;
-    shedding_level.innerText = `  Shedding Level: ${breeds.shedding_level}`;
-    social_needs.innerText = `  Social Needs:  ${breeds.social_needs}`;
-    stranger_friendly.innerText = `  Stranger Friendly:  ${breeds.stranger_friendly}`;
-    vocalisation.innerText = `  Breeds:  ${breeds.vocalisation}`;
+    temperament.innerText = `${breeds.temperament}`;
+    affection_level.innerText = `Affection Level: ${breeds.affection_level}`;
+    adaptability.innerText = `Adaptability: ${breeds.adaptability}`;
+    child_friendly.innerText = `Child Friendly: ${breeds.child_friendly}`;
+    dog_friendly.innerText = `Dog Friendly: ${breeds.dog_friendly}`;
+    energy_level.innerText = `Energy Level: ${breeds.energy_level}`;
+    grooming.innerText = `Grooming: ${breeds.grooming}`;
+    health_issues.innerText = `Health Issues: ${breeds.health_issues}`;
+    intelligence.innerText = `Intelligence: ${breeds.intelligence}`;
+    shedding_level.innerText = `Shedding Level: ${breeds.shedding_level}`;
+    social_needs.innerText = `Social Needs: ${breeds.social_needs}`;
+    stranger_friendly.innerText = `Stranger Friendly:  ${breeds.stranger_friendly}`;
+    vocalisation.innerText = `Vocalisation: ${breeds.vocalisation}`;
     // abyssinianImage.src = breeds.image.url;
     // aeganImage.src = breeds.image.url;
-    americanBobtailImage.src = breeds.image.url;
+    // americanBobtailImage.src = breeds.image.url;
     // americanCurlImage.src = breeds.image.url;
     // americanShorthairImage.src = breeds.image.url;
     // americanWirehairImage.src = breeds.image.url;
@@ -491,11 +486,11 @@ async function displayResults(index) {
 
 
     card.classList.add("cardWrapper");
+    image.classList.add("image");
     cardBody.classList.add("cardDiv");
-    // image.classList.add("image");
     name.classList.add("h1Class");
-    about.classList.add("pClass");
-    temperament.classList.add("pClass");
+    about.classList.add("about");
+    temperament.classList.add("temperament");
     affection_level.classList.add("pClass");
     adaptability.classList.add("pClass");
     child_friendly.classList.add("pClass");
@@ -512,7 +507,7 @@ async function displayResults(index) {
     card.classList.add("breed-results");
     // abyssinianImage.classList.add("abysinnianImage");
     // aeganImage.classList.add("aeganImage");
-    americanBobtailImage.classList.add("americanBobtailImage");
+    // americanBobtailImage.classList.add("americanBobtailImage");
     // americanCurlImage.classList.add("americanCurlImage");
     // americanShorthairImage.classList.add("americanShorthairImage");
     // americanWirehairImage.classList.add("americanWirehairImage");
@@ -577,8 +572,8 @@ async function displayResults(index) {
     // turkishVanImage.classList.add("turkishVanImage");
     // yorkChocolateImage.classList.add("yorkChocolateImage");
 
-    // card.appendChild(image);
-    card.appendChild(americanBobtailImage);
+    card.appendChild(image);
+    // card.appendChild(americanBobtailImage);
     card.appendChild(cardBody);
     cardBody.appendChild(name);
     cardBody.appendChild(about);
