@@ -1,24 +1,59 @@
 //BREEDS
 
 let fetchResults = [];
-let breedResults = document.getElementById("breed-results");
+let breedResults = document.getElementById("breedsResults");
+// let option = document.querySelector('option');
+submit.addEventListener("click", () => fetchBreed())
+
+// const fetchBreed = () => {
+
+//     fetch(`https://api.thecatapi.com/v1/images/search?breed_ids=${option.value}&api_key=5c39ffec-91f9-41c9-ab0f-c2131d3563a6`)
+//         .then((res) => res.json())
+//         .then((data) => {
+//             console.log(data)
+//             displayResults(data)
+//         })
+const fetchBreed = () => {
+    fetch('https://api.thecatapi.com/v1/breeds?api_key=5c39ffec-91f9-41c9-ab0f-c2131d3563a6')
+
+        .then(function (response) {
+            return response.json();
+        }).then(function (breeds) {
+                console.log(breeds);
+                fetchResults = breeds;
+                // displayResults(breeds);
+                // displayResults(fetchResults);
+                // displayResults(fetchBreed);
+                // displayResults(breedResults);
+                // displayResults();
+
+            }
+
+        )
+}
+
+// const displayResults = (data) => {
+//     data.map((breed) => {
+//         breed.breeds.map((cat) => {
+//             console.log(cat)
+//             let breedName = document.createElement('p')
+//             let bengalImage = document.getElementById('Bengalimage')
+//             breedName.innerText = cat.name
+//             bengalImage.src = 'https://cdn2.thecatapi.com/images/8pCFG7gCV.jpg';
 
 
-fetch('https://api.thecatapi.com/v1/breeds?api_key=5c39ffec-91f9-41c9-ab0f-c2131d3563a6')
+//             breedResults.appendChild(breedName)
+//             breedResults.appendChild(bengalImage);
+//         })
+//     })
+// }
 
-    .then(function (response) {
-        return response.json();
-    }).then(function (breeds) {
-        console.log(breeds);
-        fetchResults = breeds;
-        // displayResults(fetchResults);
-    })
-
-let submit = document.getElementById("submit")
-submit.addEventListener("click", getBreeds)
 
 function getBreeds(e) {
     console.log(e);
+    // submit.addEventListener("click", "submit")
+    // submit.addEventListener("click", () => displayResults())
+    // submit.addEventListener("click", () => fetchBreed())
     let option = document.getElementById("breeds").value
     switch (option) {
 
@@ -296,8 +331,8 @@ function getBreeds(e) {
     }
 }
 
-
 async function displayResults(index) {
+    console.log('is this working?')
 
     // let image = document.createElement("img");
     // let abyssinianImage = document.createElement("img")
@@ -366,6 +401,7 @@ async function displayResults(index) {
     // let turkishAngoraImage = document.createElement("img");
     // let turkishVanImage = document.createElement("img");
     // let yorkChocolateImage = document.createElement("img");
+    // console.log(index);
     let breeds = fetchResults[index];
     let card = document.createElement("div");
     let cardBody = document.createElement("div");
@@ -392,16 +428,17 @@ async function displayResults(index) {
         }
     }
 
-    if (results.childNodes.length > 3) {
-        results.removeChild(results.childNodes[3]);
+    if (breedsResults.childNodes.length > 3) {
+        breedsResults.removeChild(breedsResults.childNodes[3]);
     };
 
-    console.log(breeds);
-    console.log(fetchResults);
-    console.log(index);
+    // console.log(breeds);
     // console.log(breeds.intelligence);
 
-    image.src = breeds.image.url;
+    // console.log(fetchResults);
+    // console.log(index);
+    console.log("is this broken?");
+    image.src = breeds.url.image;
     name.innerText = breeds.name;
     about.innerText = breeds.description;
     temperament.innerText = `${breeds.temperament}`;
@@ -485,8 +522,8 @@ async function displayResults(index) {
     // yorkChocolateImage.src = breeds.image.url;
 
 
-    card.classList.add("cardWrapper");
     image.classList.add("image");
+    card.classList.add("cardWrapper");
     cardBody.classList.add("cardDiv");
     name.classList.add("h1Class");
     about.classList.add("about");
@@ -503,8 +540,8 @@ async function displayResults(index) {
     social_needs.classList.add("pClass");
     stranger_friendly.classList.add("pClass");
     vocalisation.classList.add("pClass");
+    card.classList.add("breeds-results");
     // cardBody.classList.add("pClass");
-    card.classList.add("breed-results");
     // abyssinianImage.classList.add("abysinnianImage");
     // aeganImage.classList.add("aeganImage");
     // americanBobtailImage.classList.add("americanBobtailImage");
@@ -573,7 +610,6 @@ async function displayResults(index) {
     // yorkChocolateImage.classList.add("yorkChocolateImage");
 
     card.appendChild(image);
-    // card.appendChild(americanBobtailImage);
     card.appendChild(cardBody);
     cardBody.appendChild(name);
     cardBody.appendChild(about);
@@ -590,7 +626,7 @@ async function displayResults(index) {
     cardBody.appendChild(social_needs);
     cardBody.appendChild(stranger_friendly);
     cardBody.appendChild(vocalisation);
-    results.appendChild(card);
+    breedResults.appendChild(card);
     // card.appendChild(abyssinianImage);
     // card.appendChild(aeganImage);
     // card.appendChild(americanBobtailImage);
