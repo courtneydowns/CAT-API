@@ -1,9 +1,9 @@
 //BREEDS
 
-let fetchResults = [];
-let breedResults = document.getElementById("breedsResults");
+
+// let breedResults = document.getElementById("breedsResults");
 // let option = document.querySelector('option');
-submit.addEventListener("click", () => fetchBreed())
+
 
 // const fetchBreed = () => {
 
@@ -13,32 +13,29 @@ submit.addEventListener("click", () => fetchBreed())
 //             console.log(data)
 //             displayResults(data)
 //         })
-const fetchBreed = () => {
-    fetch('https://api.thecatapi.com/v1/breeds?api_key=5c39ffec-91f9-41c9-ab0f-c2131d3563a6')
+let fetchResults = [];
 
-        .then(function (response) {
-            return response.json();
-        }).then(function (breeds) {
-                console.log(breeds);
-                fetchResults = breeds;
-                // displayResults(breeds);
-                // displayResults(fetchResults);
-                // displayResults(fetchBreed);
-                // displayResults(breedResults);
-                // displayResults();
+fetch('https://api.thecatapi.com/v1/breeds?api_key=5c39ffec-91f9-41c9-ab0f-c2131d3563a6')
 
-            }
+    .then(function (response) {
+        return response.json();
+    }).then(function (breeds) {
+            // fetchResults = (breeds);
+            console.log(breeds);
+            displayResults();
 
-        )
-}
+        }
 
+    )
+// console.log(fetchResults);
+// console.log(fetchResults);
 // const displayResults = (data) => {
 //     data.map((breed) => {
 //         breed.breeds.map((cat) => {
 //             console.log(cat)
 //             let breedName = document.createElement('p')
 //             let bengalImage = document.getElementById('Bengalimage')
-//             breedName.innerText = cat.name
+//             breedName.innerHTML = cat.name
 //             bengalImage.src = 'https://cdn2.thecatapi.com/images/8pCFG7gCV.jpg';
 
 
@@ -49,11 +46,13 @@ const fetchBreed = () => {
 // }
 
 
-function getBreeds(e) {
-    console.log(e);
-    // submit.addEventListener("click", "submit")
-    // submit.addEventListener("click", () => displayResults())
-    // submit.addEventListener("click", () => fetchBreed())
+// function getBreeds() {
+// console.log(e);
+// submit.addEventListener("click", "submit")
+// submit.addEventListener("click", () => displayResults())
+// submit.addEventListener("click", () => fetchBreed())
+let submit = document.getElementById("submit");
+submit.addEventListener("click", () => {
     let option = document.getElementById("breeds").value
     switch (option) {
 
@@ -329,98 +328,15 @@ function getBreeds(e) {
             console.log(`error${option}`);
             break;
     }
-}
+})
 
-async function displayResults(index) {
+async function displayResults(arrayBucket = 0) {
     console.log('is this working?')
+    let results = document.getElementById("results");
 
-    // let image = document.createElement("img");
-    // let abyssinianImage = document.createElement("img")
-    // let aeganImage = document.createElement("img");
-    // let americanBobtailImage = document.createElement("img");
-    // let americanCurlImage = document.createElement("img");
-    // let americanShorthairImage = document.createElement("img");
-    // let americanWirehairImage = document.createElement("img");
-    // let arabianMauImage = document.createElement("img");
-    // let balineseImage = document.createElement("img");
-    // let bambinoImage = document.createElement("img");
-    // let bengalImage = document.createElement("img");
-    // let birmanImage = document.createElement("img");
-    // let bombayImage = document.createElement("img");
-    // let britishLonghairImage = document.createElement("img");
-    // let britishShorthairImage = document.createElement("img");
-    // let burmeseImage = document.createElement("img");
-    // let burmillaImage = document.createElement("img");
-    // let californiaSpangledImage = document.createElement("img");
-    // let chantillyTiffanyImage = document.createElement("img");
-    // let chartreuxImage = document.createElement("img");
-    // let chausieImage = document.createElement("img");
-    // let cheetohImage = document.createElement("img");
-    // let colorpointShorthairImage = document.createElement("img");
-    // let cornishRexImage = document.createElement("img");
-    // let cyprusImage = document.createElement("img");
-    // let cymricImage = document.createElement("img");
-    // let devonRexImage = document.createElement("img");
-    // let donskoyImage = document.createElement("img");
-    // let dragonLiImage = document.createElement("img");
-    // let egyptianMauImage = document.createElement("img");
-    // let europeanBurmeseImage = document.createElement("img");
-    // let exoticShorthairImage = document.createElement("img");
-    // let havanaBrownImage = document.createElement("img");
-    // let himalayanImage = document.createElement("img");
-    // let japaneseBobtailImage = document.createElement("img");
-    // let javaneseImage = document.createElement("img");
-    // let khaoManeeImage = document.createElement("img");
-    // let koratImage = document.createElement("img");
-    // let kurilianImage = document.createElement("img");
-    // let laPermImage = document.createElement("img");
-    // let maineCoonImage = document.createElement("img");
-    // let malayanImage = document.createElement("img");
-    // let manxImage = document.createElement("img");
-    // let munchkinImage = document.createElement("img");
-    // let nebelungImage = document.createElement("img");
-    // let norwegianForestCatImage = document.createElement("img");
-    // let ocicatImage = document.createElement("img");
-    // let orientalImage = document.createElement("img");
-    // let persianImage = document.createElement("img");
-    // let pixieBobImage = document.createElement("img");
-    // let ragamuffinImage = document.createElement("img");
-    // let ragdollImage = document.createElement("img");
-    // let russianBlueImage = document.createElement("img");
-    // let savannahImage = document.createElement("img");
-    // let scottishFoldImage = document.createElement("img");
-    // let selkirkRexImage = document.createElement("img");
-    // let siameseImage = document.createElement("img");
-    // let siberianImage = document.createElement("img");
-    // let singapuraImage = document.createElement("img");
-    // let snowshoeImage = document.createElement("img");
-    // let somaliImage = document.createElement("img");
-    // let sphynxImage = document.createElement("img");
-    // let tonkineseImage = document.createElement("img");
-    // let toygerImage = document.createElement("img");
-    // let turkishAngoraImage = document.createElement("img");
-    // let turkishVanImage = document.createElement("img");
-    // let yorkChocolateImage = document.createElement("img");
-    // console.log(index);
-    let breeds = fetchResults[index];
-    let card = document.createElement("div");
-    let cardBody = document.createElement("div");
-    let image = document.createElement("img");
-    let name = document.createElement("h1");
-    let about = document.createElement("p");
-    let temperament = document.createElement("p");
-    let affection_level = document.createElement("p");
-    let adaptability = document.createElement("p");
-    let child_friendly = document.createElement("p");
-    let dog_friendly = document.createElement("p");
-    let energy_level = document.createElement("p");
-    let grooming = document.createElement("p");
-    let health_issues = document.createElement("p");
-    let intelligence = document.createElement("p");
-    let shedding_level = document.createElement("p");
-    let social_needs = document.createElement("p");
-    let stranger_friendly = document.createElement("p");
-    let vocalisation = document.createElement("p");
+    while (results.firstChild) {
+        results.removeChild(results.firstChild);
+    }
 
     function detach(node) {
         if (node.parentNode) {
@@ -428,205 +344,104 @@ async function displayResults(index) {
         }
     }
 
-    if (breedsResults.childNodes.length > 3) {
-        breedsResults.removeChild(breedsResults.childNodes[3]);
+    if (results.childNodes.length > 3) {
+        results.removeChild(breedsResults.childNodes[3]);
     };
 
-    // console.log(breeds);
-    // console.log(breeds.intelligence);
+    let breeds = fetchResults[arrayBucket].breeds;
+    let name = fetchResults[arrayBucket].name;
+    let about = fetchResults[arrayBucket].about;
+    let temperament = fetchResults[arrayBucket].temperament;
+    let affection_level = fetchResults[arrayBucket].affection_level;
+    let adaptability = fetchResults[arrayBucket].adaptability;
+    let child_friendly = fetchResults[arrayBucket].child_friendly;
+    let dog_friendly = fetchResults[arrayBucket].dog_friendly;
+    let energy_level = fetchResults[arrayBucket].energy_level;
+    let grooming = fetchResults[arrayBucket].grooming;
+    let health_issues = fetchResults[arrayBucket].health_issues;
+    let intelligence = fetchResults[arrayBucket].intelligence;
+    let shedding_level = fetchResults[arrayBucket].shedding_level;
+    let social_needs = fetchResults[arrayBucket].social_needs;
+    let stranger_friendly = fetchResults[arrayBucket].stranger_friendly;
+    let vocalisation = fetchResults[arrayBucket].vocalisation;
 
-    // console.log(fetchResults);
-    // console.log(index);
-    console.log("is this broken?");
-    image.src = breeds.url.image;
-    name.innerText = breeds.name;
-    about.innerText = breeds.description;
-    temperament.innerText = `${breeds.temperament}`;
-    affection_level.innerText = `Affection Level: ${breeds.affection_level}`;
-    adaptability.innerText = `Adaptability: ${breeds.adaptability}`;
-    child_friendly.innerText = `Child Friendly: ${breeds.child_friendly}`;
-    dog_friendly.innerText = `Dog Friendly: ${breeds.dog_friendly}`;
-    energy_level.innerText = `Energy Level: ${breeds.energy_level}`;
-    grooming.innerText = `Grooming: ${breeds.grooming}`;
-    health_issues.innerText = `Health Issues: ${breeds.health_issues}`;
-    intelligence.innerText = `Intelligence: ${breeds.intelligence}`;
-    shedding_level.innerText = `Shedding Level: ${breeds.shedding_level}`;
-    social_needs.innerText = `Social Needs: ${breeds.social_needs}`;
-    stranger_friendly.innerText = `Stranger Friendly:  ${breeds.stranger_friendly}`;
-    vocalisation.innerText = `Vocalisation: ${breeds.vocalisation}`;
-    // abyssinianImage.src = breeds.image.url;
-    // aeganImage.src = breeds.image.url;
-    // americanBobtailImage.src = breeds.image.url;
-    // americanCurlImage.src = breeds.image.url;
-    // americanShorthairImage.src = breeds.image.url;
-    // americanWirehairImage.src = breeds.image.url;
-    // arabianMauImage.src = breeds.image.url;
-    // balineseImage.src = breeds.image.url;
-    // bambinoImage.src = breeds.image.url;
-    // bengalImage.src = breeds.image.url;
-    // birmanImage.src = breeds.image.url;
-    // bombayImage.src = breeds.image.url;
-    // britishLonghairImage.src = breeds.image.url;
-    // britishShorthairImage.src = breeds.image.url;
-    // burmeseImage.src = breeds.image.url;
-    // burmillaImage.src = breeds.image.url;
-    // californiaSpangledImage.src = breeds.image.url;
-    // chantillyTiffanyImage.src = breeds.image.url;
-    // chartreuxImage.src = breeds.image.url;
-    // chausieImage.src = breeds.image.url;
-    // cheetohImage.src = breeds.image.url;
-    // colorpointShorthairImage.src = breeds.image.url;
-    // cornishRexImage.src = breeds.image.url;
-    // cymricImage.src = breeds.image.url;
-    // cyprusImage.src = breeds.image.url;
-    // devonRexImage.src = breeds.image.url;
-    // donskoyImage.src = breeds.image.url;
-    // dragonLiImage.src = breeds.image.url;
-    // egyptianMauImage.src = breeds.image.url;
-    // europeanBurmeseImage.src = breeds.image.url;
-    // exoticShorthairImage.src = breeds.image.url;
-    // havanaBrownImage.src = breeds.image.url;
-    // himalayanImage.src = breeds.image.url;
-    // japaneseBobtailImage.src = breeds.image.url;
-    // javaneseImage.src = breeds.image.url;
-    // khaoManeeImage.src = breeds.image.url;
-    // koratImage.src = breeds.image.url;
-    // kurilianImage.src = breeds.image.url;
-    // laPermImage.src = breeds.image.url;
-    // maineCoonImage.src = breeds.image.url;
-    // malayanImage.src = breeds.image.url;
-    // manxImage.src = breeds.image.url;
-    // munchkinImage.src = breeds.image.url;
-    // nebelungImage.src = breeds.image.url;
-    // norwegianForestCatImage.src = breeds.image.url;
-    // ocicatImage.src = breeds.image.url;
-    // orientalImage.src = breeds.image.url;
-    // persianImage.src = breeds.image.url;
-    // pixieBobImage.src = breeds.image.url;
-    // ragamuffinImage.src = breeds.image.url;
-    // ragdollImage.src = breeds.image.url;
-    // russianBlueImage.src = breeds.image.url;
-    // savannahImage.src = breeds.image.url;
-    // scottishFoldImage.src = breeds.image.url;
-    // selkirkRexImage.src = breeds.image.url;
-    // siameseImage.src = breeds.image.url;
-    // siberianImage.src = breeds.image.url;
-    // singapuraImage.src = breeds.image.url;
-    // snowshoeImage.src = breeds.image.url;
-    // somaliImage.src = breeds.image.url;
-    // sphynxImage.src = breeds.image.url;
-    // tonkineseImage.src = breeds.image.url;
-    // toygerImage.src = breeds.image.url;
-    // turkishAngoraImage.src = breeds.image.url;
-    // turkishVanImage.src = breeds.image.url;
-    // yorkChocolateImage.src = breeds.image.url;
+    let displayImage = document.createElement("img");
+    let displayName = document.createElement("h1")
+    let displayAbout = document.createElement("h3");
+    let displayTemperament = document.createElement("p");
+    let displayAffection_level = document.createElement("p")
+    let displayAdaptability = document.createElement("p");
+    let displayChild_friendly = document.createElement("p");
+    let displayDog_friendly = document.createElement("p");
+    let displayEnergy_level = document.createElement("p");
+    let displayGrooming = document.createElement("p");
+    let displayHealth_issues = document.createElement("p");
+    let displayIntelligence = document.createElement("p");
+    let displayShedding_level = document.createElement("p");
+    let displaySocial_needs = document.createElement("p");
+    let displayStranger_friendly = document.createElement("p");
+    let displayVocalisation = document.createElement("p");
+    console.log("is this broken?")
+
+    displayName.innerHTML = `${name}`;
+    displayAbout.innerHTML = `${about}`;
+    displayTemperament.innerHTML = `${temperament}`;
+    displayAffection_level.innerHTML = `Affection Level: ${affection_level}`;
+    displayAdaptability.innerHTML = `Adaptability: ${adaptability}`;
+    displayChild_friendly.innerHTML = `Child Friendly: ${child_friendly}`;
+    displayDog_friendly.innerHTML = `Dog Friendly: ${dog_friendly}`;
+    displayEnergy_level.innerHTML = `Energy Level: ${energy_level}`;
+    displayGrooming.innerHTML = `Grooming: ${grooming}`;
+    displayHealth_issues.innerHTML = `Health Issues: ${health_issues}`;
+    displayIntelligence.innerHTML = `Intelligence: ${intelligence}`;
+    displayShedding_level.innerHTML = `Shedding Level: ${shedding_level}`;
+    displaySocial_needs.innerHTML = `Social Needs: ${social_needs}`;
+    displayStranger_friendly.innerHTML = `Stranger Friendly: ${stranger_friendly}`;
+    displayVocalisation.innerHTML = `Vocalisation: ${vocalisation}`;
+
+    console.log("help!")
+
+    for (let i = 0; i < breeds; i++) {
+        let imageFetch = await fetch(breeds[i]);
+        let resultImageFetch = await imageFetch.json()
+
+        let image = resultImageFetch.image;
+
+        displayImage.src = image;
+
+        let card = document.createElement("div");
+        let cardBody = document.createElement("div");
+
+        card.setAttribute("class", "card")
+        cardBody.setAttribute("class", "cardBody")
+
+        console.log("please work.")
+
+        card.appendChild(displayImage);
+        card.appendChild(cardBody);
+        cardBody.appendChild(displayName);
+        cardBody.appendChild(displayAbout);
+        cardBody.appendChild(displayTemperament);
+        cardBody.appendChild(displayAffection_level);
+        cardBody.appendChild(displayAdaptability);
+        cardBody.appendChild(displayChild_friendly);
+        cardBody.appendChild(displayDog_friendly);
+        cardBody.appendChild(displayEnergy_level);
+        cardBody.appendChild(displayGrooming);
+        cardBody.appendChild(displayHealth_issues);
+        cardBody.appendChild(displayIntelligence);
+        cardBody.appendChild(displayShedding_level);
+        cardBody.appendChild(displaySocial_needs);
+        cardBody.appendChild(displayStranger_friendly);
+        cardBody.appendChild(displayVocalisation);
+        results.appendChild(card);
+    }
 
 
-    image.classList.add("image");
-    card.classList.add("cardWrapper");
-    cardBody.classList.add("cardDiv");
-    name.classList.add("h1Class");
-    about.classList.add("about");
-    temperament.classList.add("temperament");
-    affection_level.classList.add("pClass");
-    adaptability.classList.add("pClass");
-    child_friendly.classList.add("pClass");
-    dog_friendly.classList.add("pClass");
-    energy_level.classList.add("pClass");
-    grooming.classList.add("pClass");
-    health_issues.classList.add("pClass");
-    intelligence.classList.add("pClass");
-    shedding_level.classList.add("pClass");
-    social_needs.classList.add("pClass");
-    stranger_friendly.classList.add("pClass");
-    vocalisation.classList.add("pClass");
-    card.classList.add("breeds-results");
-    // cardBody.classList.add("pClass");
-    // abyssinianImage.classList.add("abysinnianImage");
-    // aeganImage.classList.add("aeganImage");
-    // americanBobtailImage.classList.add("americanBobtailImage");
-    // americanCurlImage.classList.add("americanCurlImage");
-    // americanShorthairImage.classList.add("americanShorthairImage");
-    // americanWirehairImage.classList.add("americanWirehairImage");
-    // arabianMauImage.classList.add("arabianMauImage")
-    // balineseImage.classList.add("balineseImage");
-    // bambinoImage.classList.add("bambinoImage");
-    // bengalImage.classList.add("bengalImage");
-    // birmanImage.classList.add("birmanImage");
-    // bombayImage.classList.add("bombayImage");
-    // britishLonghairImage.classList.add("britishLonghairImage");
-    // britishShorthairImage.classList.add("britishShorthairImage");
-    // burmeseImage.classList.add("burmeseImage");
-    // burmillaImage.classList.add("burmillaImage");
-    // californiaSpangledImage.classList.add("californiaSpangledImage")
-    // chantillyTiffanyImage.classList.add("chantillyTiffanyImage");
-    // chartreuxImage.classList.add("chartreuxImage");
-    // chausieImage.classList.add("chausieImage");
-    // cheetohImage.classList.add("cheetohImage");
-    // colorpointShorthairImage.classList.add("colorpointShorthairImage");
-    // cornishRexImage.classList.add("cornishRexImage");
-    // cymricImage.classList.add("cymricImage");
-    // cyprusImage.classList.add("cyprusImage");
-    // devonRexImage.classList.add("devonRexImage");
-    // donskoyImage.classList.add("donskoyImage");
-    // dragonLiImage.classList.add("dragonLiImage");
-    // egyptianMauImage.classList.add("dragonLiImage");
-    // europeanBurmeseImage.classList.add("europeanBurmeseImage");
-    // exoticShorthairImage.classList.add("exoticShorthairImage");
-    // havanaBrownImage.classList.add("havanaBrownImage");
-    // himalayanImage.classList.add("himalayanImage");
-    // japaneseBobtailImage.classList.add("japaneseBobtailImage");
-    // javaneseImage.classList.add("javaneseImage");
-    // khaoManeeImage.classList.add("khaoManeeImage");
-    // koratImage.classList.add("koratImage");
-    // kurilianImage.classList.add("kurilianImage");
-    // laPermImage.classList.add("laPermImage");
-    // maineCoonImage.classList.add("maineCoonImage");
-    // malayanImage.classList.add("malayanImage");
-    // manxImage.classList.add("manxImage");
-    // munchkinImage.classList.add("munchkinImage");
-    // nebelungImage.classList.add("nebelungImage");
-    // norwegianForestCatImage.classList.add("norwegianForestCatImage");
-    // ocicatImage.classList.add("ocicatImage");
-    // orientalImage.classList.add("orientalImage");
-    // persianImage.classList.add("persianImage");
-    // pixieBobImage.classList.add("pixieBobImage");
-    // ragamuffinImage.classList.add("ragamuffinImage");
-    // ragdollImage.classList.add("ragdollImage");
-    // russianBlueImage.classList.add("russianBlueImage");
-    // savannahImage.classList.add("savannahImage");
-    // scottishFoldImage.classList.add("scottishFoldImage");
-    // selkirkRexImage.classList.add("selkirkRexImage");
-    // siameseImage.classList.add("siameseImage");
-    // siberianImage.classList.add("siberianImage");
-    // singapuraImage.classList.add("singapuraImage");
-    // snowshoeImage.classList.add("snowshoeImage");
-    // somaliImage.classList.add("somaliImage");
-    // sphynxImage.classList.add("sphynxImage");
-    // tonkineseImage.classList.add("tonkineseImage");
-    // toygerImage.classList.add("toygerImage");
-    // turkishAngoraImage.classList.add("turkishAngoraImage");
-    // turkishVanImage.classList.add("turkishVanImage");
-    // yorkChocolateImage.classList.add("yorkChocolateImage");
 
-    card.appendChild(image);
-    card.appendChild(cardBody);
-    cardBody.appendChild(name);
-    cardBody.appendChild(about);
-    cardBody.appendChild(temperament);
-    cardBody.appendChild(affection_level);
-    cardBody.appendChild(adaptability);
-    cardBody.appendChild(child_friendly);
-    cardBody.appendChild(dog_friendly);
-    cardBody.appendChild(energy_level);
-    cardBody.appendChild(grooming);
-    cardBody.appendChild(health_issues);
-    cardBody.appendChild(intelligence);
-    cardBody.appendChild(shedding_level);
-    cardBody.appendChild(social_needs);
-    cardBody.appendChild(stranger_friendly);
-    cardBody.appendChild(vocalisation);
-    breedResults.appendChild(card);
+
+
+
     // card.appendChild(abyssinianImage);
     // card.appendChild(aeganImage);
     // card.appendChild(americanBobtailImage);
