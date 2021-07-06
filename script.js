@@ -15,13 +15,14 @@
 //         })
 let fetchResults = [];
 
-fetch('https://api.thecatapi.com/v1/breeds?api_key=5c39ffec-91f9-41c9-ab0f-c2131d3563a6')
+fetch('http://api.thecatapi.com/v1/breeds?api_key=5c39ffec-91f9-41c9-ab0f-c2131d3563a6')
 
     .then(function (response) {
         return response.json();
     }).then(function (breeds) {
-            // fetchResults = (breeds);
+            fetchResults.breeds = breeds;
             console.log(breeds);
+            console.log(fetchResults);
             displayResults();
 
         }
@@ -57,7 +58,7 @@ submit.addEventListener("click", () => {
     switch (option) {
 
         case "breed-1":
-            diplayResults(0);
+            displayResults(0);
             break;
 
         case "breed-2":
@@ -345,30 +346,31 @@ async function displayResults(arrayBucket = 0) {
     }
 
     if (results.childNodes.length > 3) {
-        results.removeChild(breedsResults.childNodes[3]);
+        results.removeChild(results.childNodes[3]);
     };
 
-    let breeds = fetchResults[arrayBucket].breeds;
-    let name = fetchResults[arrayBucket].name;
-    let about = fetchResults[arrayBucket].about;
-    let temperament = fetchResults[arrayBucket].temperament;
-    let affection_level = fetchResults[arrayBucket].affection_level;
-    let adaptability = fetchResults[arrayBucket].adaptability;
-    let child_friendly = fetchResults[arrayBucket].child_friendly;
-    let dog_friendly = fetchResults[arrayBucket].dog_friendly;
-    let energy_level = fetchResults[arrayBucket].energy_level;
-    let grooming = fetchResults[arrayBucket].grooming;
-    let health_issues = fetchResults[arrayBucket].health_issues;
-    let intelligence = fetchResults[arrayBucket].intelligence;
-    let shedding_level = fetchResults[arrayBucket].shedding_level;
-    let social_needs = fetchResults[arrayBucket].social_needs;
-    let stranger_friendly = fetchResults[arrayBucket].stranger_friendly;
-    let vocalisation = fetchResults[arrayBucket].vocalisation;
+    let breeds = fetchResults.breeds;
+    let image = fetchResults.breeds[arrayBucket].image;
+    let name = fetchResults.breeds[arrayBucket].name;
+    let about = fetchResults.breeds[arrayBucket].description;
+    let temperament = fetchResults.breeds[arrayBucket].temperament;
+    let affection_level = fetchResults.breeds[arrayBucket].affection_level;
+    let adaptability = fetchResults.breeds[arrayBucket].adaptability;
+    let child_friendly = fetchResults.breeds[arrayBucket].child_friendly;
+    let dog_friendly = fetchResults.breeds[arrayBucket].dog_friendly;
+    let energy_level = fetchResults.breeds[arrayBucket].energy_level;
+    let grooming = fetchResults.breeds[arrayBucket].grooming;
+    let health_issues = fetchResults.breeds[arrayBucket].health_issues;
+    let intelligence = fetchResults.breeds[arrayBucket].intelligence;
+    let shedding_level = fetchResults.breeds[arrayBucket].shedding_level;
+    let social_needs = fetchResults.breeds[arrayBucket].social_needs;
+    let stranger_friendly = fetchResults.breeds[arrayBucket].stranger_friendly;
+    let vocalisation = fetchResults.breeds[arrayBucket].vocalisation;
 
     let displayImage = document.createElement("img");
     let displayName = document.createElement("h1")
-    let displayAbout = document.createElement("h3");
-    let displayTemperament = document.createElement("p");
+    let displayAbout = document.createElement("h2");
+    let displayTemperament = document.createElement("h3");
     let displayAffection_level = document.createElement("p")
     let displayAdaptability = document.createElement("p");
     let displayChild_friendly = document.createElement("p");
@@ -382,7 +384,12 @@ async function displayResults(arrayBucket = 0) {
     let displayStranger_friendly = document.createElement("p");
     let displayVocalisation = document.createElement("p");
     console.log("is this broken?")
+    let card = document.createElement("div");
+    let cardBody = document.createElement("div");
+    card.setAttribute("class", "card")
+    cardBody.setAttribute("class", "cardBody")
 
+    displayImage.src = image.url;
     displayName.innerHTML = `${name}`;
     displayAbout.innerHTML = `${about}`;
     displayTemperament.innerHTML = `${temperament}`;
@@ -399,42 +406,50 @@ async function displayResults(arrayBucket = 0) {
     displayStranger_friendly.innerHTML = `Stranger Friendly: ${stranger_friendly}`;
     displayVocalisation.innerHTML = `Vocalisation: ${vocalisation}`;
 
+    results.appendChild(card);
+    card.appendChild(displayImage);
+    card.appendChild(cardBody);
+    cardBody.appendChild(displayName);
+    cardBody.appendChild(displayAbout);
+    cardBody.appendChild(displayTemperament);
+    cardBody.appendChild(displayAffection_level);
+    cardBody.appendChild(displayAdaptability);
+    cardBody.appendChild(displayChild_friendly);
+    cardBody.appendChild(displayDog_friendly);
+    cardBody.appendChild(displayEnergy_level);
+    cardBody.appendChild(displayGrooming);
+    cardBody.appendChild(displayHealth_issues);
+    cardBody.appendChild(displayIntelligence);
+    cardBody.appendChild(displayShedding_level);
+    cardBody.appendChild(displaySocial_needs);
+    cardBody.appendChild(displayStranger_friendly);
+    cardBody.appendChild(displayVocalisation);
+
+    console.log(breeds);
+    console.log(fetchResults);
+
     console.log("help!")
 
-    for (let i = 0; i < breeds; i++) {
-        let imageFetch = await fetch(breeds[i]);
-        let resultImageFetch = await imageFetch.json()
+    for (let i = 0; i < breeds.length; i++) {
+        // let imageFetch = await fetch(breeds[i]);
+        // let resultImageFetch = await imageFetch.json()
 
-        let image = resultImageFetch.image;
+        if (breeds[i].image) {
+            let image = breeds[i].image.url
+            console.log(image);
+        }
 
-        displayImage.src = image;
 
-        let card = document.createElement("div");
-        let cardBody = document.createElement("div");
 
-        card.setAttribute("class", "card")
-        cardBody.setAttribute("class", "cardBody")
 
-        console.log("please work.")
+        // displayImage.src = image;
 
-        card.appendChild(displayImage);
-        card.appendChild(cardBody);
-        cardBody.appendChild(displayName);
-        cardBody.appendChild(displayAbout);
-        cardBody.appendChild(displayTemperament);
-        cardBody.appendChild(displayAffection_level);
-        cardBody.appendChild(displayAdaptability);
-        cardBody.appendChild(displayChild_friendly);
-        cardBody.appendChild(displayDog_friendly);
-        cardBody.appendChild(displayEnergy_level);
-        cardBody.appendChild(displayGrooming);
-        cardBody.appendChild(displayHealth_issues);
-        cardBody.appendChild(displayIntelligence);
-        cardBody.appendChild(displayShedding_level);
-        cardBody.appendChild(displaySocial_needs);
-        cardBody.appendChild(displayStranger_friendly);
-        cardBody.appendChild(displayVocalisation);
-        results.appendChild(card);
+
+
+
+        //     console.log("please work.")
+
+
     }
 
 

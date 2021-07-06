@@ -1,4 +1,4 @@
-.about {
+h2 {
     /* display: inline-block; */
     margin-left: 5em;
     margin-right: 5em;
@@ -9,7 +9,7 @@
     padding-bottom: .25em;
     line-height: 1.85em;
     /* border: 2px solid red; */
-    font-size: 26px;
+    font-size: 28px;
     font-family: 'Spectral', sans-serif;
     word-spacing: .2em;
     color: #272c3a;
