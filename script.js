@@ -15,7 +15,7 @@
 //         })
 let fetchResults = [];
 
-fetch('http://api.thecatapi.com/v1/breeds?api_key=5c39ffec-91f9-41c9-ab0f-c2131d3563a6')
+fetch('https://api.thecatapi.com/v1/breeds?api_key=5c39ffec-91f9-41c9-ab0f-c2131d3563a6')
 
     .then(function (response) {
         return response.json();
