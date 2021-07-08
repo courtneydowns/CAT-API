@@ -1,11 +1,17 @@
 h1 {
-    padding-top: .75em;
+    padding-top: .5em;
     letter-spacing: .1em;
     color: black;
     font-size: 60px;
+    /* padding-right: 3em; */
+    justify-content: center;
+    align-items: center;
+    display: block;
+    /* margin-left: 1em; */
 }
 
-.hvr-grow {
+
+/* .breeds-results{
     display: inline-block;
     vertical-align: middle;
     -webkit-transform: perspective(1px) translateZ(0);
@@ -16,9 +22,11 @@ h1 {
     -webkit-transition-property: transform;
     transition-property: transform;
   }
-  .hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+
+  .breeds-results:hover, .hvr-grow:focus, .hvr-grow:active {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
+  } */
 
 /* h3 {
     padding-top: .75em;
