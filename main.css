@@ -1,17 +1,11 @@
 @import "breeds.css";
-@import "jumbotron.css";
+@import "heroImage.css";
 @import "navBar.css";
-@import "cardImage.css";
 @import "results.css";
-@import "pClass.css";
-@import "h1Class.css";
 @import "about.css";
-@import "temperament.css";
-@import "card-color.css";
 @import "footer.css";
 
 body {
-    background-color: black;
-    color: white;
-    height: 200vh;
+  background-color: black;
+  color: white;
 }
