@@ -376,7 +376,7 @@ async function displayResults(arrayBucket = 0) {
   let card = document.createElement("div");
   card.classList.add("card");
   card.classList.add("text-center");
-  card.style.width = 288;
+  card.style.width = "40rem";
 
   card.innerHTML = `<img src="${image.url}" class="card-img-top" alt="${name}">
    <div class="card-body">
@@ -384,7 +384,7 @@ async function displayResults(arrayBucket = 0) {
      <p class="card-text">${about}</p>
    </div>
    <ul class="list-group list-group-flush">
-     <li class="list-group-item" style="font-weight: bold";>${temperament}</li>
+     <li class="list-group-item temperament" style="font-weight: bold";>${temperament}</li>
      <li class="list-group-item">Affection Level: ${affection_level}</li>
      <li class="list-group-item">Adaptability: ${adaptability}</li>
      <li class="list-group-item">Child Friendly: ${child_friendly}</li>
