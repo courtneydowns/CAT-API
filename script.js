@@ -1,16 +1,3 @@
-//BREEDS
-
-// let breedResults = document.getElementById("breedsResults");
-// let option = document.querySelector('option');
-
-// const fetchBreed = () => {
-
-//     fetch(`https://api.thecatapi.com/v1/images/search?breed_ids=${option.value}&api_key=5c39ffec-91f9-41c9-ab0f-c2131d3563a6`)
-//         .then((res) => res.json())
-//         .then((data) => {
-//             console.log(data)
-//             displayResults(data)
-//         })
 let fetchResults = [];
 
 fetch(
@@ -25,28 +12,7 @@ fetch(
     console.log(fetchResults);
     displayResults();
   });
-// console.log(fetchResults);
-// console.log(fetchResults);
-// const displayResults = (data) => {
-//     data.map((breed) => {
-//         breed.breeds.map((cat) => {
-//             console.log(cat)
-//             let breedName = document.createElement('p')
-//             let bengalImage = document.getElementById('Bengalimage')
-//             breedName.innerHTML = cat.name
-//             bengalImage.src = 'https://cdn2.thecatapi.com/images/8pCFG7gCV.jpg';
 
-//             breedResults.appendChild(breedName)
-//             breedResults.appendChild(bengalImage);
-//         })
-//     })
-// }
-
-// function getBreeds() {
-// console.log(e);
-// submit.addEventListener("click", "submit")
-// submit.addEventListener("click", () => displayResults())
-// submit.addEventListener("click", () => fetchBreed())
 let submit = document.getElementById("submit");
 submit.addEventListener("click", () => {
   let option = document.getElementById("breeds").value;
@@ -360,19 +326,6 @@ async function displayResults(arrayBucket = 0) {
   let stranger_friendly = fetchResults.breeds[arrayBucket].stranger_friendly;
   let vocalisation = fetchResults.breeds[arrayBucket].vocalisation;
 
-  //   <div class="card" style="width: 18rem;">
-  //   <img src="..." class="card-img-top" alt="...">
-  //   <div class="card-body">
-  //     <h5 class="card-title">Card title</h5>
-  //     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  //   </div>
-  //   <ul class="list-group list-group-flush">
-  //     <li class="list-group-item">An item</li>
-  //     <li class="list-group-item">A second item</li>
-  //     <li class="list-group-item">A third item</li>
-  //   </ul>
-  // </div>
-
   let card = document.createElement("div");
   card.classList.add("card");
   card.classList.add("text-center");
@@ -400,147 +353,6 @@ async function displayResults(arrayBucket = 0) {
   </ul>`;
 
   results.appendChild(card);
-
-  // let displayImage = document.createElement("img");
-  // let displayName = document.createElement("h1");
-  // let displayAbout = document.createElement("h2");
-  // let displayTemperament = document.createElement("h3");
-  // let displayAffection_level = document.createElement("p");
-  // let displayAdaptability = document.createElement("p");
-  // let displayChild_friendly = document.createElement("p");
-  // let displayDog_friendly = document.createElement("p");
-  // let displayEnergy_level = document.createElement("p");
-  // let displayGrooming = document.createElement("p");
-  // let displayHealth_issues = document.createElement("p");
-  // let displayIntelligence = document.createElement("p");
-  // let displayShedding_level = document.createElement("p");
-  // let displaySocial_needs = document.createElement("p");
-  // let displayStranger_friendly = document.createElement("p");
-  // let displayVocalisation = document.createElement("p");
-
-  // displayImage.src = image.url;
-  // displayName.innerHTML = `${name}`;
-  // displayAbout.innerHTML = `${about}`;
-  // displayTemperament.innerHTML = `${temperament}`;
-  // displayAffection_level.innerHTML = `Affection Level: ${affection_level}`;
-  // displayAdaptability.innerHTML = `Adaptability: ${adaptability}`;
-  // displayChild_friendly.innerHTML = `Child Friendly: ${child_friendly}`;
-  // displayDog_friendly.innerHTML = `Dog Friendly: ${dog_friendly}`;
-  // displayEnergy_level.innerHTML = `Energy Level: ${energy_level}`;
-  // displayGrooming.innerHTML = `Grooming: ${grooming}`;
-  // displayHealth_issues.innerHTML = `Health Issues: ${health_issues}`;
-  // displayIntelligence.innerHTML = `Intelligence: ${intelligence}`;
-  // displayShedding_level.innerHTML = `Shedding Level: ${shedding_level}`;
-  // displaySocial_needs.innerHTML = `Social Needs: ${social_needs}`;
-  // displayStranger_friendly.innerHTML = `Stranger Friendly: ${stranger_friendly}`;
-  // displayVocalisation.innerHTML = `Vocalisation: ${vocalisation}`;
-
-  // let card = document.createElement("div");
-  // card.setAttribute("class", "card");
-  // card.setAttribute("style", "width: 18rem;");
-  // let cardImgTop = document.createElement("img");
-  // cardImgTop.setAttribute("class", "card-img-top");
-  // let cardBody = document.createElement("div");
-  // cardBody.setAttribute("class", "card-body");
-  // let cardTitle = document.createElement("h5");
-  // cardTitle.setAttribute("class", "card-title");
-  // cardTitle.setAttribute("style", "font-size:38px");
-  // let cardText = document.createElement("p");
-  // cardText.setAttribute("class", "card-text");
-  // cardText.setAttribute("style", "font-size:28px;");
-  // let list = document.createElement("ul");
-  // list.setAttribute("class", "list-group list-group-flush");
-  // list.setAttribute("style", "list-style: none; font-size:20px;");
-  // let listGroupItemOne = document.createElement("li");
-  // listGroupItemOne.setAttribute("class", "list-group-item-one");
-  // let listGroupItemTwo = document.createElement("li");
-  // listGroupItemTwo.setAttribute("class", "list-group-item-two");
-  // let listGroupItemThree = document.createElement("li");
-  // listGroupItemThree.setAttribute("class", "list-group-item-three");
-  // let listGroupItemFour = document.createElement("li");
-  // listGroupItemFour.setAttribute("class", "list-group-item-four");
-  // let listGroupItemFive = document.createElement("li");
-  // listGroupItemFive.setAttribute("class", "list-group-item-five");
-  // let listGroupItemSix = document.createElement("li");
-  // listGroupItemSix.setAttribute("class", "list-group-item-six");
-  // let listGroupItemSeven = document.createElement("li");
-  // listGroupItemSeven.setAttribute("class", "list-group-item-seven");
-  // let listGroupItemEight = document.createElement("li");
-  // listGroupItemEight.setAttribute("class", "list-group-item-eight");
-  // let listGroupItemNine = document.createElement("li");
-  // listGroupItemNine.setAttribute("class", "list-group-item-nine");
-  // let listGroupItemTen = document.createElement("li");
-  // listGroupItemTen.setAttribute("class", "list-group-item-ten");
-  // let listGroupItemEleven = document.createElement("li");
-  // listGroupItemEleven.setAttribute("class", "list-group-item-eleven");
-  // let listGroupItemTwelve = document.createElement("li");
-  // listGroupItemTwelve.setAttribute("class", "list-group-item-twelve");
-  // let listGroupItemThirteen = document.createElement("li");
-  // listGroupItemThirteen.setAttribute("class", "list-group-item-thirteen");
-
-  // cardImgTop.src = image.url;
-  // cardTitle.innerText = `${name}`;
-  // cardText.innerText = `${about}`;
-  // listGroupItemOne.innerText = `${temperament}`;
-  // listGroupItemTwo.innerText = `Affection Level: ${affection_level}`;
-  // listGroupItemThree.innerText = `Adaptability: ${adaptability}`;
-  // listGroupItemFour.innerText = `Child Friendly: ${child_friendly}`;
-  // listGroupItemFive.innerText = `Dog Friendly: ${dog_friendly}`;
-  // listGroupItemSix.innerText = `Energy Level: ${energy_level}`;
-  // listGroupItemSeven.innerText = `Grooming: ${grooming}`;
-  // listGroupItemEight.innerText = `Health Issues: ${health_issues}`;
-  // listGroupItemNine.innerText = `Intelligence: ${intelligence}`;
-  // listGroupItemTen.innerText = `Shedding Level: ${shedding_level}`;
-  // listGroupItemEleven.innerText = `Social Needs: ${social_needs}`;
-  // listGroupItemTwelve.innerText = `Stranger Friendly: ${stranger_friendly}`;
-  // listGroupItemThirteen.innerText = `Vocalisation: ${vocalisation}`;
-
-  // list.appendChild(listGroupItemOne);
-  // list.appendChild(listGroupItemTwo);
-  // list.appendChild(listGroupItemThree);
-  // list.appendChild(listGroupItemFour);
-  // list.appendChild(listGroupItemFive);
-  // list.appendChild(listGroupItemSix);
-  // list.appendChild(listGroupItemSeven);
-  // list.appendChild(listGroupItemEight);
-  // list.appendChild(listGroupItemNine);
-  // list.appendChild(listGroupItemTen);
-  // list.appendChild(listGroupItemEleven);
-  // list.appendChild(listGroupItemTwelve);
-  // list.appendChild(listGroupItemThirteen);
-
-  // cardBody.appendChild(cardTitle);
-  // cardBody.appendChild(cardText);
-
-  // card.appendChild(cardImgTop);
-  // card.appendChild(cardBody);
-  // card.appendChild(list);
-
-  // results.appendChild(card);
-
-  // results.appendChild(card);
-  // card.appendChild(displayImage);
-  // card.appendChild(cardBody);
-  // cardBody.appendChild(displayName);
-  // cardBody.appendChild(displayAbout);
-  // cardBody.appendChild(displayTemperament);
-  // cardBody.appendChild(displayAffection_level);
-  // cardBody.appendChild(displayAdaptability);
-  // cardBody.appendChild(displayChild_friendly);
-  // cardBody.appendChild(displayDog_friendly);
-  // cardBody.appendChild(displayEnergy_level);
-  // cardBody.appendChild(displayGrooming);
-  // cardBody.appendChild(displayHealth_issues);
-  // cardBody.appendChild(displayIntelligence);
-  // cardBody.appendChild(displayShedding_level);
-  // cardBody.appendChild(displaySocial_needs);
-  // cardBody.appendChild(displayStranger_friendly);
-  // cardBody.appendChild(displayVocalisation);
-
-  console.log(breeds);
-  console.log(fetchResults);
-
-  console.log("help!");
 
   for (let i = 0; i < breeds.length; i++) {
     if (breeds[i].image) {
