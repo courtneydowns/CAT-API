@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&family=Spectral&display=swap');
+
+/* ----------------------------------------------------- */
+
+body {
+  margin: 0;
+  background-color: black;
+}
+
+body * {
+  box-sizing: border-box;
+  font-family: Spectral, sans-serif;
+}
+
+img {
+  display: block;
+  margin: auto;
+  max-width: 100vw;
+}
+
+/* ----------------------------------------------------- */
+
+#top-nav {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  background-color: black;
+  color: white;
+  font-family: Karla, serif;
+}
+
+#top-nav h1 {
+  font-size: 40px;
+}
+
+#top-nav img.shocked-cat {
+  margin-right: 10px;
+  margin-left: 4px;
+  height: 64px;
+}
+
+/* ----------------------------------------------------- */
+
+.breed-selector {
+  padding: 8px;
+  text-align: center;
+}
+
+.breed-selector-heading {
+  color: white;
+  font-size: 38px;
+}
+
+/* ----------------------------------------------------- */
+
+.divider {
+  margin: 16px 4px 28px;
+  height: 16px;
+  background: url('./assets/greenpawpringdivider.png') center / contain;
+}
+
+/* ----------------------------------------------------- */
+
+/* generated from js */
+
+#results .card {
+  display: flex;
+  flex-direction: column;
+}
+
+#results .cardBody {
+  padding: 0 8px;
+  background-color: white;
+}
+
+/* ----------------------------------------------------- */
+
+footer {
+  padding: 32px;
+  background-color: black;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+}
+
+/* ----------------------------------------------------  */
+
+@media screen and (min-width: 400px) {
+  #top-nav {
+    justify-content: center;
+  }
+
+  /* 
+  #main-image {
+  } 
+  */
+}
