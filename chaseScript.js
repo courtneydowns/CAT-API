@@ -1,9 +1,9 @@
 let fetchResults = {
-  breeds: []
+  breeds: [],
 };
 
 fetch(
-  'https://api.thecatapi.com/v1/breeds?api_key=5c39ffec-91f9-41c9-ab0f-c2131d3563a6'
+  "https://api.thecatapi.com/v1/breeds?api_key=5c39ffec-91f9-41c9-ab0f-c2131d3563a6"
 )
   .then((resp) => resp.json())
   .then((jsonData) => {
@@ -11,14 +11,14 @@ fetch(
     displayResults(0);
   });
 
-let submit = document.getElementById('submit');
-submit.addEventListener('click', () => {
-  let option = document.getElementById('breeds').value;
-  displayResults(option.split('-')[1]);
+let submit = document.getElementById("submit");
+submit.addEventListener("click", () => {
+  let option = document.getElementById("breeds").value;
+  displayResults(option.split("-")[1]);
 });
 
 function displayResults(arrayBucket) {
-  let results = document.getElementById('results');
+  let results = document.getElementById("results");
 
   results.innerHTML = null;
 
@@ -41,27 +41,27 @@ function displayResults(arrayBucket) {
   let stranger_friendly = breeds[arrayBucket].stranger_friendly;
   let vocalisation = breeds[arrayBucket].vocalisation;
 
-  let displayImage = document.createElement('img');
-  let displayName = document.createElement('h1');
-  let displayAbout = document.createElement('h2');
-  let displayTemperament = document.createElement('h3');
-  let displayAffection_level = document.createElement('p');
-  let displayAdaptability = document.createElement('p');
-  let displayChild_friendly = document.createElement('p');
-  let displayDog_friendly = document.createElement('p');
-  let displayEnergy_level = document.createElement('p');
-  let displayGrooming = document.createElement('p');
-  let displayHealth_issues = document.createElement('p');
-  let displayIntelligence = document.createElement('p');
-  let displayShedding_level = document.createElement('p');
-  let displaySocial_needs = document.createElement('p');
-  let displayStranger_friendly = document.createElement('p');
-  let displayVocalisation = document.createElement('p');
+  let displayImage = document.createElement("img");
+  let displayName = document.createElement("h1");
+  let displayAbout = document.createElement("h2");
+  let displayTemperament = document.createElement("h3");
+  let displayAffection_level = document.createElement("p");
+  let displayAdaptability = document.createElement("p");
+  let displayChild_friendly = document.createElement("p");
+  let displayDog_friendly = document.createElement("p");
+  let displayEnergy_level = document.createElement("p");
+  let displayGrooming = document.createElement("p");
+  let displayHealth_issues = document.createElement("p");
+  let displayIntelligence = document.createElement("p");
+  let displayShedding_level = document.createElement("p");
+  let displaySocial_needs = document.createElement("p");
+  let displayStranger_friendly = document.createElement("p");
+  let displayVocalisation = document.createElement("p");
 
-  let card = document.createElement('div');
-  let cardBody = document.createElement('div');
-  card.setAttribute('class', 'card');
-  cardBody.setAttribute('class', 'cardBody');
+  let card = document.createElement("div");
+  let cardBody = document.createElement("div");
+  card.setAttribute("class", "card");
+  cardBody.setAttribute("class", "cardBody");
 
   displayImage.src = image.url;
   displayName.innerHTML = `${name}`;

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla&family=Spectral&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Karla&family=Spectral&display=swap");
 
 /* ----------------------------------------------------- */
 
@@ -56,7 +56,7 @@ img {
 .divider {
   margin: 16px 4px 28px;
   height: 16px;
-  background: url('./assets/greenpawpringdivider.png') center / contain;
+  background: url("./assets/greenpawpringdivider.png") center / contain;
 }
 
 /* ----------------------------------------------------- */
@@ -71,6 +71,7 @@ img {
 #results .cardBody {
   padding: 0 8px;
   background-color: white;
+  text-align: center;
 }
 
 /* ----------------------------------------------------- */
