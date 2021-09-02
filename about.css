@@ -1,16 +1,5 @@
-h2 {
-    /* display: inline-block; */
-    margin-left: 5em;
-    margin-right: 5em;
-    /* display: block; */
-    /* margin: 0 auto; */
-    text-align: center;
-    padding-top: .5em;
-    padding-bottom: .25em;
-    line-height: 1.85em;
-    /* border: 2px solid red; */
-    font-size: 28px;
-    font-family: 'Spectral', sans-serif;
-    word-spacing: .2em;
-    color: #272c3a;
+.card-text {
+  font-family: "Spectral", sans-serif;
+  color: #272c3a;
+  font-size: 22px;
 }
