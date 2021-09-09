@@ -1,5 +1,6 @@
-/* .jumbotron {
-  background-image: url("./assets/CaturdayCollage.png") no-repeat center center;
-  height: 160vh;
-  background-size: cover;
-} */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
