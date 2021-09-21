@@ -23,6 +23,18 @@ img {
   background-color: white;
 }
 
+#select-submit-container {
+  height: 40px;
+}
+
+#submit {
+  position: relative;
+  top: -2px;
+  height: 100%;
+  border: none;
+  border-radius: 2px;
+}
+
 .drop-down-breeds {
   text-align: center;
 }
@@ -31,11 +43,11 @@ img {
   margin: 32px 0;
   width: 100%;
   height: 16px;
-  background: url("./assets/greenpawpringdivider.png") center / contain;
+  background: url('./assets/greenpawpringdivider.png') center / contain;
   transform: scale(1.5);
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 600px) {
   .navbar .container-fluid {
     flex-wrap: nowrap !important;
   }
@@ -55,6 +67,7 @@ img {
 
   #select-submit-container {
     display: flex;
+    justify-content: center;
     align-items: center;
     margin-bottom: 16px;
     padding: 0 8px;
@@ -62,11 +75,11 @@ img {
   }
 
   #breeds {
+    margin-right: 4px;
     height: 100%;
   }
 
   #submit {
-    width: initial;
-    height: 110%;
+    top: 0;
   }
 }
