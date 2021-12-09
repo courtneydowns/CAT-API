@@ -1,7 +1,10 @@
-.jumbotron {
-background: url('./assets/CaturdayCollage.png') no-repeat center center;
-height: 160vh;
-/* width: 100%; */
-background-size: cover;
-/* padding-bottom: 100px;; */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.jumbotron .container {
+  transform: scale(0.8);
 }

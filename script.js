@@ -1,8 +1,7 @@
-//BREEDS
 let fetchResults = [];
 
 fetch(
-  "https://api.thecatapi.com/v1/breeds?api_key=5c39ffec-91f9-41c9-ab0f-c2131d3563a6"
+  "https://api.thecatapi.com/v1/breeds?api_key=783f34e1-5fc9-49e1-b01e-b45073f00bc1"
 )
   .then(function (response) {
     return response.json();
@@ -293,7 +292,6 @@ submit.addEventListener("click", () => {
 });
 
 async function displayResults(arrayBucket = 0) {
-  console.log("is this working?");
   let results = document.getElementById("results");
 
   while (results.firstChild) {
@@ -328,145 +326,38 @@ async function displayResults(arrayBucket = 0) {
   let stranger_friendly = fetchResults.breeds[arrayBucket].stranger_friendly;
   let vocalisation = fetchResults.breeds[arrayBucket].vocalisation;
 
-  let displayImage = document.createElement("img");
-  let displayName = document.createElement("h1");
-  let displayAbout = document.createElement("h2");
-  let displayTemperament = document.createElement("h3");
-  let displayAffection_level = document.createElement("p");
-  let displayAdaptability = document.createElement("p");
-  let displayChild_friendly = document.createElement("p");
-  let displayDog_friendly = document.createElement("p");
-  let displayEnergy_level = document.createElement("p");
-  let displayGrooming = document.createElement("p");
-  let displayHealth_issues = document.createElement("p");
-  let displayIntelligence = document.createElement("p");
-  let displayShedding_level = document.createElement("p");
-  let displaySocial_needs = document.createElement("p");
-  let displayStranger_friendly = document.createElement("p");
-  let displayVocalisation = document.createElement("p");
-  console.log("is this broken?");
   let card = document.createElement("div");
-  let cardBody = document.createElement("div");
-  card.setAttribute("class", "card");
-  cardBody.setAttribute("class", "cardBody");
+  card.classList.add("card");
+  card.classList.add("text-center");
+  card.style.width = "40rem";
 
-  displayImage.src = image.url;
-  displayName.innerHTML = `${name}`;
-  displayAbout.innerHTML = `${about}`;
-  displayTemperament.innerHTML = `${temperament}`;
-  displayAffection_level.innerHTML = `Affection Level: ${affection_level}`;
-  displayAdaptability.innerHTML = `Adaptability: ${adaptability}`;
-  displayChild_friendly.innerHTML = `Child Friendly: ${child_friendly}`;
-  displayDog_friendly.innerHTML = `Dog Friendly: ${dog_friendly}`;
-  displayEnergy_level.innerHTML = `Energy Level: ${energy_level}`;
-  displayGrooming.innerHTML = `Grooming: ${grooming}`;
-  displayHealth_issues.innerHTML = `Health Issues: ${health_issues}`;
-  displayIntelligence.innerHTML = `Intelligence: ${intelligence}`;
-  displayShedding_level.innerHTML = `Shedding Level: ${shedding_level}`;
-  displaySocial_needs.innerHTML = `Social Needs: ${social_needs}`;
-  displayStranger_friendly.innerHTML = `Stranger Friendly: ${stranger_friendly}`;
-  displayVocalisation.innerHTML = `Vocalisation: ${vocalisation}`;
+  card.innerHTML = `<img src="${image.url}" class="card-img-top" alt="${name}">
+   <div class="card-body">
+     <h5 class="card-title">${name}</h5>
+     <p class="card-text">${about}</p>
+   </div>
+   <ul class="list-group list-group-flush">
+     <li class="list-group-item temperament" style="font-weight: bold";>${temperament}</li>
+     <li class="list-group-item">Affection Level: ${affection_level}</li>
+     <li class="list-group-item">Adaptability: ${adaptability}</li>
+     <li class="list-group-item">Child Friendly: ${child_friendly}</li>
+     <li class="list-group-item">Dog Friendly: ${dog_friendly}</li>
+     <li class="list-group-item">Energy Level: ${energy_level}</li>
+     <li class="list-group-item">Grooming: ${grooming}</li>
+     <li class="list-group-item">Health Issues: ${health_issues}</li>
+     <li class="list-group-item">Intelligence: ${intelligence}</li>
+     <li class="list-group-item">Shedding Level: ${shedding_level}</li>
+     <li class="list-group-item">Social Needs: ${social_needs}</li>
+     <li class="list-group-item">Stranger Friendly: ${stranger_friendly}</li>
+     <li class="list-group-item">Vocalisation: ${vocalisation}</li>
+  </ul>`;
 
   results.appendChild(card);
-  card.appendChild(displayImage);
-  card.appendChild(cardBody);
-  cardBody.appendChild(displayName);
-  cardBody.appendChild(displayAbout);
-  cardBody.appendChild(displayTemperament);
-  cardBody.appendChild(displayAffection_level);
-  cardBody.appendChild(displayAdaptability);
-  cardBody.appendChild(displayChild_friendly);
-  cardBody.appendChild(displayDog_friendly);
-  cardBody.appendChild(displayEnergy_level);
-  cardBody.appendChild(displayGrooming);
-  cardBody.appendChild(displayHealth_issues);
-  cardBody.appendChild(displayIntelligence);
-  cardBody.appendChild(displayShedding_level);
-  cardBody.appendChild(displaySocial_needs);
-  cardBody.appendChild(displayStranger_friendly);
-  cardBody.appendChild(displayVocalisation);
-
-  console.log(breeds);
-  console.log(fetchResults);
-
-  console.log("help!");
 
   for (let i = 0; i < breeds.length; i++) {
-    // let imageFetch = await fetch(breeds[i]);
-    // let resultImageFetch = await imageFetch.json()
-
     if (breeds[i].image) {
       let image = breeds[i].image.url;
       console.log(image);
     }
-
-    // displayImage.src = image;
-
-    //     console.log("please work.")
   }
-
-  // card.appendChild(abyssinianImage);
-  // card.appendChild(aeganImage);
-  // card.appendChild(americanBobtailImage);
-  // card.appendChild(americanCurlImage);
-  // card.appendChild(americanShorthairImage);
-  // card.appendChild(americanWirehairImage);
-  // card.appendChild(arabianMauImage);
-  // card.appendChild(balineseImage);
-  // card.appendChild(bambinoImage);
-  // card.appendChild(bengalImage);
-  // card.appendChild(birmanImage);
-  // card.appendChild(bombayImage);
-  // card.appendChild(britishLonghairImage);
-  // card.appendChild(britishShorthairImage);
-  // card.appendChild(burmeseImage);
-  // card.appendChild(burmillaImage);
-  // card.appendChild(californiaSpangledImage);
-  // card.appendChild(chantillyTiffanyImage);
-  // card.appendChild(chartreuxImage);
-  // card.appendChild(chausieImage);
-  // card.appendChild(cheetohImage);
-  // card.appendChild(colorpointShorthairImage);
-  // card.appendChild(cornishRexImage);
-  // card.appendChild(cymricImage);
-  // card.appendChild(cyprusImage);
-  // card.appendChild(devonRexImage);
-  // card.appendChild(donskoyImage);
-  // card.appendChild(dragonLiImage);
-  // card.appendChild(egyptianMauImage);
-  // card.appendChild(europeanBurmeseImage);
-  // card.appendChild(exoticShorthairImage);
-  // card.appendChild(havanaBrownImage);
-  // card.appendChild(himalayanImage);
-  // card.appendChild(japaneseBobtailImage);
-  // card.appendChild(javaneseImage);
-  // card.appendChild(khaoManeeImage);
-  // card.appendChild(koratImage);
-  // card.appendChild(kurilianImage);
-  // card.appendChild(laPermImage);
-  // card.appendChild(maineCoonImage);
-  // card.appendChild(malayanImage);
-  // card.appendChild(manxImage);
-  // card.appendChild(munchkinImage);
-  // card.appendChild(norwegianForestCatImage);
-  // card.appendChild(ocicatImage);
-  // card.appendChild(orientalImage);
-  // card.appendChild(persianImage);
-  // card.appendChild(ragamuffinImage);
-  // card.appendChild(ragdollImage);
-  // card.appendChild(russianBlueImage);
-  // card.appendChild(savannahImage);
-  // card.appendChild(scottishFoldImage);
-  // card.appendChild(selkirkRexImage);
-  // card.appendChild(siameseImage);
-  // card.appendChild(siberianImage);
-  // card.appendChild(singapuraImage);
-  // card.appendChild(snowshoeImage);
-  // card.appendChild(somaliImage);
-  // card.appendChild(sphynxImage);
-  // card.appendChild(tonkineseImage);
-  // card.appendChild(toygerImage);
-  // card.appendChild(turkishAngoraImage);
-  // card.appendChild(turkishVanImage);
-  // card.appendChild(yorkChocolateImage);
 }

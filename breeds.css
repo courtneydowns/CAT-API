@@ -1,19 +1,13 @@
 #breeds {
-    font-size: 24px !important;
-    font-family: 'Spectral', sans-serif;    
+  font-size: 24px !important;
+  font-family: "Spectral", sans-serif;
 }
 
 .breeds-results {
-    font-size: 50px;
+  font-size: 50px;
 }
 
-/* .drop-down {
-    width: 30px !important;
-    height: 10px;
-    padding-top: 5px;
+/* #submit {
+  width: 9%;
+  height: 4%;
 } */
-
-#submit {
-    width: 9%;
-    height: 4%;
-}

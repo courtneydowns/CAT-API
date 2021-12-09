@@ -1,3 +1,11 @@
-h1 {
-    text-align: center;
+li {
+  font-family: "Spectral", sans-serif;
+  font-size: 20px;
+  color: #272c3a;
+}
+
+#results {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

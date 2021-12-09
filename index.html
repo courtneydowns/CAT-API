@@ -1,201 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500&family=Spectral:wght@300;400;500;700&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500&family=Spectral:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <link rel="stylesheet" href="main.css">
-    <!-- <link href="css/hover.css" rel="stylesheet" media="all"> -->
+    <link rel="stylesheet" href="main.css" />
+
     <title>Cats: The Comprehensive Meowtastic Database</title>
-</head>
+  </head>
 
-<body>
+  <body>
+    <!-- NAV BAR WITH CAT-A-BASE and CAT-ERGORIES -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light"
+      id="navigationBar"
+    >
+      <div class="container-fluid">
+        <a
+          class="navbar-brand"
+          href="#"
+          style="font-family: 'Lara', sans-serif; font-size: 34px; color: white"
+        >
+          <img
+            src="./assets/shockedCatWhite.png"
+            alt=""
+            width="50"
+            height="50"
+            class="d-inline-block align-text-top"
+          />
+          The Cat-A-Base
+        </a>
+        <!-- <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button> -->
+      </div>
 
-    <!-- NAV BAR WITH CAT-A-BASE -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: black !important; width: 100%;"
-        id="navigationBar">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#" style="font-family: 'Lara', sans-serif; font-size: 34px; color: white;">
-                <img src="./assets/shockedCatWhite.png" alt="" width="50" height="50"
-                    class="d-inline-block align-text-top">
-                The Cat-A-Base
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto flex-nowrap">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#"
-                            style="color: white; font-size: 20px; font-family: 'Karla' sans-serif;"></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"
-                            style="color: white; font-size: 20px; font-family: 'Karla' sans-serif;"></a>
-                    </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="#"
-                            style="color: white; font-size: 20px; font-family: 'spectral' sans-serif;">CAT-EGORIES</a>
-                    </li> -->
-                </ul>
-            </div>
-        </div>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto flex-nowrap">
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              aria-current="page"
+              href="#"
+              style="
+                color: white;
+                font-size: 20px;
+                font-family: 'Karla' sans-serif;
+              "
+            ></a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#"
+              style="
+                color: white;
+                font-size: 20px;
+                font-family: 'Karla' sans-serif;
+              "
+            ></a>
+          </li>
+        </ul>
+      </div>
     </nav>
-    </div>
-    </nav>
-
-    <br />
-
 
     <div class="jumbotron jumbotron-fluid text-center">
-        <div class="container">
-            <!-- <img src="./assets/Where it's always Caturday collage.png" /> -->
-        </div>
+      <div class="container">
+        <img src="./assets/WhereItsAlwaysCaturdayCollage.png" />
+      </div>
     </div>
-
-    <!-- style="background-image: url(./assets/CatABaseOfBreeds.png); width: auto; height: 120vh; background-size: cover;"> -->
 
     <!-- BREEDS -->
     <div class="drop-down-breeds">
+      <h1 class="breeds-results" style="padding-bottom: 20px; color: white">
+        Cat-A-Base of Breeds:
+      </h1>
+      <div id="select-submit-container">
+        <select name="breeds" id="breeds">
+          <option value=" breed-1">Abyssinian</option>
+          <option value="breed-2">Aegan</option>
+          <option value="breed-3">American Bobtail</option>
+          <option value="breed-4">American Curl</option>
+          <option value="breed-5">American Shorthair</option>
+          <option value="breed-6">American Wirehair</option>
+          <option value="breed-7">Arabian Mau</option>
+          <option value="breed-8">Australian Mist</option>
+          <option value="breed-9">Balinese</option>
+          <option value="breed-10">Bambino</option>
+          <option value="breed-11">Bengal</option>
+          <option value="breed-12">Birman</option>
+          <option value="breed-13">Bombay</option>
+          <option value="breed-14">British Longhair</option>
+          <option value="breed-15">British Shorthair</option>
+          <option value="breed-16">Burmese</option>
+          <option value="breed-17">Burmilla</option>
+          <option value="breed-18">California Spangled</option>
+          <option value="breed-19">Chatilly-Tiffany</option>
+          <option value="breed-20">Chartreux</option>
+          <option value="breed-21">Chausie</option>
+          <option value="breed-22">Cheetoh</option>
+          <option value="breed-23">Colorpoint Shorthair</option>
+          <option value="breed-24">Cornish Rex</option>
+          <option value="breed-25">Cymric</option>
+          <option value="breed-26">Cyprus</option>
+          <option value="breed-27">Devon Rex</option>
+          <option value="breed-28">Donskoy</option>
+          <option value="breed-29">Dragon Li</option>
+          <option value="breed-30">Egyptian Mau</option>
+          <option value="breed-31">European Burmese</option>
+          <option value="breed-32">Exotic Shorthair</option>
+          <option value="breed-33">Havana Brown</option>
+          <option value="breed-34">Himalayan</option>
+          <option value="breed-35">Japanese Bobtail</option>
+          <option value="breed-36">Javanese</option>
+          <option value="breed-37">Khao Manee</option>
+          <option value="breed-38">Korat</option>
+          <option value="breed-39">Kurilian</option>
+          <option value="breed-40">LaPerm</option>
+          <option value="breed-41">Maine Coon</option>
+          <option value="breed-42">Malayan</option>
+          <option value="breed-43">Manx</option>
+          <option value="breed-44">Munchkin</option>
+          <option value="breed-45">Nebelung</option>
+          <option value="breed-46">Norwegian Forest Cat</option>
+          <option value="breed-47">Ocicat</option>
+          <option value="breed-48">Oriental</option>
+          <option value="breed-49">Persian</option>
+          <option value="breed-50">Pixie-bob</option>
+          <option value="breed-51">Ragamuffin</option>
+          <option value="breed-52">Ragdoll</option>
+          <option value="breed-53">Russian Blue</option>
+          <option value="breed-54">Savannah</option>
+          <option value="breed-55">Scottish Fold</option>
+          <option value="breed-56">Selkirk Rex</option>
+          <option value="breed-57">Siamese</option>
+          <option value="breed-58">Siberian</option>
+          <option value="breed-59">Singapura</option>
+          <option value="breed-60">Snowshoe</option>
+          <option value="breed-61">Somali</option>
+          <option value="breed-62">Sphynx</option>
+          <option value="breed-63">Tonkinese</option>
+          <option value="breed-64">Toyger</option>
+          <option value="breed-65">Turkish Angora</option>
+          <option value="breed-66">Turkish Van</option>
+          <option value="breed-67">York Chocolate</option>
+        </select>
+        <button id="submit" style="font-family: 'Spectral', sans-serif">
+          Submit, meow.
+        </button>
+      </div>
+    </div>
 
-        <div class="breeds" style="margin-top: 2.5em; text-align: center; padding-bottom: 10px;">
-            <h1 class="breeds-results" style="padding-bottom: 20px; color: white;">Cat-A-Base of Breeds: </h1>
-            <select name="breeds" id="breeds">
-                <option value=" breed-1">Abyssinian</option>
-                <option value="breed-2">Aegan</option>
-                <option value="breed-3">American Bobtail</option>
-                <option value="breed-4">American Curl</option>
-                <option value="breed-5">American Shorthair</option>
-                <option value="breed-6">American Wirehair</option>
-                <option value="breed-7">Arabian Mau</option>
-                <option value="breed-8">Australian Mist</option>
-                <option value="breed-9">Balinese</option>
-                <option value="breed-10">Bambino</option>
-                <option value="breed-11">Bengal</option>
-                <option value="breed-12">Birman</option>
-                <option value="breed-13">Bombay</option>
-                <option value="breed-14">British Longhair</option>
-                <option value="breed-15">British Shorthair</option>
-                <option value="breed-16">Burmese</option>
-                <option value="breed-17">Burmilla</option>
-                <option value="breed-18">California Spangled</option>
-                <option value="breed-19">Chatilly-Tiffany</option>
-                <option value="breed-20">Chartreux</option>
-                <option value="breed-21">Chausie</option>
-                <option value="breed-22">Cheetoh</option>
-                <option value="breed-23">Colorpoint Shorthair</option>
-                <option value="breed-24">Cornish Rex</option>
-                <option value="breed-25">Cymric</option>
-                <option value="breed-26">Cyprus</option>
-                <option value="breed-27">Devon Rex</option>
-                <option value="breed-28">Donskoy</option>
-                <option value="breed-29">Dragon Li</option>
-                <option value="breed-30">Egyptian Mau</option>
-                <option value="breed-31">European Burmese</option>
-                <option value="breed-32">Exotic Shorthair</option>
-                <option value="breed-33">Havana Brown</option>
-                <option value="breed-34">Himalayan</option>
-                <option value="breed-35">Japanese Bobtail</option>
-                <option value="breed-36">Javanese</option>
-                <option value="breed-37">Khao Manee</option>
-                <option value="breed-38">Korat</option>
-                <option value="breed-39">Kurilian</option>
-                <option value="breed-40">LaPerm</option>
-                <option value="breed-41">Maine Coon</option>
-                <option value="breed-42">Malayan</option>
-                <option value="breed-43">Manx</option>
-                <option value="breed-44">Munchkin</option>
-                <option value="breed-45">Nebelung</option>
-                <option value="breed-46">Norwegian Forest Cat</option>
-                <option value="breed-47">Ocicat</option>
-                <option value="breed-48">Oriental</option>
-                <option value="breed-49">Persian</option>
-                <option value="breed-50">Pixie-bob</option>
-                <option value="breed-51">Ragamuffin</option>
-                <option value="breed-52">Ragdoll</option>
-                <option value="breed-53">Russian Blue</option>
-                <option value="breed-54">Savannah</option>
-                <option value="breed-55">Scottish Fold</option>
-                <option value="breed-56">Selkirk Rex</option>
-                <option value="breed-57">Siamese</option>
-                <option value="breed-58">Siberian</option>
-                <option value="breed-59">Singapura</option>
-                <option value="breed-60">Snowshoe</option>
-                <option value="breed-61">Somali</option>
-                <option value="breed-62">Sphynx</option>
-                <option value="breed-63">Tonkinese</option>
-                <option value="breed-64">Toyger</option>
-                <option value="breed-65">Turkish Angora</option>
-                <option value="breed-66">Turkish Van</option>
-                <option value="breed-67">York Chocolate</option>
-            </select>
-            <button id="submit"
-                style="height: 42px; margin-left: 1em; font-family: 'Spectral', sans-serif; font-size: 16px;">Submit,
-                meow.</button>
-        </div>
-        <img src="./assets/greenpawpringdivider.png"
-            style="width: 500px; height: 80px; margin-top: 3em; margin-left: 43.5em;" />
-        <br />
-        <br />
-        <br />
-        <div class="card-color">
-            <div id="results">
-            </div>
-        </div>
+    <!-- <img class="divider" src="./assets/greenpawpringdivider.png" /> -->
+    <div class="divider"></div>
 
-        <footer class="footer mt-auto py-3 bg-light" style="background-color: black !important; width: 100%;">
-            <div class="container">
-                <span class="text-muted">© Courtney Downs 2021</span>
-            </div>
-        </footer>
-        <!-- 
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-            </div>
-        </div> -->
+    <div id="results"></div>
 
-        <!-- CATEGORIES -->
-        <!-- <div class="drop-down-categories">
-            <div class="categories">
-                <h1 class="cat-categories">Cat-A-Base of Breeds: </h1>
-                <select name="breeds" id="breeds">
-                    <option value="category-1">boxes</option>
-                    <option value="category-2">caturday</option>
-                    <option value="category-3">clothes</option>
-                    <option value="category-4">dream</option>
-                    <option value="category-5">funny</option>
-                    <option value="category-6">hats/option>
-                    <option value="category-7">kittens</option>
-                    <option value="category-8">sinks</option>
-                    <option value="category-9">space</option>
-                    <option value="category-10">sunglasses</option>
-                    <option value="category-11">ties</option>
-            </div>
-            <div id="categories-results">
+    <footer
+      class="footer mt-auto py-3 bg-light"
+      style="background-color: black !important; width: 100%"
+    >
+      <div class="container">
+        <span class="text-muted">© Courtney Downs 2021</span>
+      </div>
+    </footer>
 
-            </div> -->
-
-
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-        </script>
-        <script src="./script.js"></script>
-</body>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
 </html>
